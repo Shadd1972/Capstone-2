@@ -1,7 +1,5 @@
 # Evergreen Quote: Vision Brief
 
-> Copy this file into `delivery-leadership-package/vision-brief.md` in your repo and fill it in. Target length: 1 page (~300 words). Write for a Liberty Mutual VP who has 90 seconds.
-
 ## Product
 **Name:** Evergreen Insurance Quote (Phase 2 React rebuild)
 **Delivery week:** 2
