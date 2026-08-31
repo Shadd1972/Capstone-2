@@ -3,9 +3,9 @@
 ## Product
 **Name:** Evergreen Insurance Quote (Phase 2 React rebuild)
 **Delivery week:** 2
-**Delivery Lead:** _your name (and pair, if any)_
-**Engineering team (represented by):** _link to your Evergreen Quote project repo_
-**GitHub Project board:** _link_
+**Delivery Lead:** Shadd Schutte
+**Engineering team (represented by):** https://github.com/Shadd1972/Capstone-2.git
+**GitHub Project board:** https://github.com/Shadd1972/Capstone-2/projects
 
 ## Who is the customer?
 Our primary customer is a first-time or relatively inexperienced insurance shopper who needs to quickly understand what coverage may cost before making a commitment. This could include a young adult purchasing auto insurance for the first time, a new renter, or a new homeowner who needs coverage soon and is comparing options across multiple insurance providers. They expect a simple, responsive experience that lets them explore different coverage choices and immediately understand how those choices affect their estimated premium without creating an account or waiting for someone to contact them.
