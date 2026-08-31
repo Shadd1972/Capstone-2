@@ -5,7 +5,7 @@
 **Delivery week:** 2
 **Delivery Lead:** Shadd Schutte
 **Engineering team (represented by):** https://github.com/Shadd1972/Capstone-2.git
-**GitHub Project board:** https://github.com/Shadd1972/Capstone-2/projects
+**GitHub Project board:** https://github.com/users/Shadd1972/projects/4
 
 ## Who is the customer?
 Our primary customer is a first-time or relatively inexperienced insurance shopper who needs to quickly understand what coverage may cost before making a commitment. This could include a young adult purchasing auto insurance for the first time, a new renter, or a new homeowner who needs coverage soon and is comparing options across multiple insurance providers. They expect a simple, responsive experience that lets them explore different coverage choices and immediately understand how those choices affect their estimated premium without creating an account or waiting for someone to contact them.
