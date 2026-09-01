@@ -4,7 +4,7 @@
 
 | # | Risk | Owner | Likelihood (L/M/H) | Impact (L/M/H) | Mitigation | Trigger to escalate |
 |---|---|---|---|---|---|---|
-| R1 | _e.g., the dev server runs code the compiler rejects, so the demo "works" while the build is red_ | _name_ | M | H | _e.g., run `npm run type-check` after every assembly step, not just before merge_ | _e.g., type-check still red at 16:00 → hold the push, name it at check-in_ |
+| R1 | with the new base rate changes the monthly premium is outrageous| sponsor| H | H | Confirm the base rates are what we want to really use and then obtain sign off from business sponsor prior to go live | testing shows abnormally high monthly premium |
 | R2 |  |  |  |  |  |  |
 | R3 |  |  |  |  |  |  |
 | R4 |  |  |  |  |  |  |

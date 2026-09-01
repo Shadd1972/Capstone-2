@@ -4,7 +4,7 @@
 
 ## Goal
 
-> _One sentence here._
+> _By end of day 4 I will have compiled and built the entire code package for the Evergreen Quote application and be prepared to demonstrate the outcome on Friday.
 
 ## "Done" looks like
 
@@ -17,4 +17,7 @@
 
 ## Out of scope (this week)
 
-- _What you are intentionally not doing._
+- Any asthetic changes or enhancements
+- Actual rate or actuarial calculations at this time
+- No claim page built yet
+- No about page built yet
