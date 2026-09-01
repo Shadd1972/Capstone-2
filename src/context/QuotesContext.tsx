@@ -50,7 +50,7 @@ export function QuotesProvider({ children }: { children: ReactNode }) {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch("/quotes.json", { signal: controller.signal });
+        const res = await fetch(`${import.meta.env.BASE_URL}quotes.json`, { signal: controller.signal });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data: Quote[] = await res.json();
         dispatch({ type: "loaded", quotes: data });
