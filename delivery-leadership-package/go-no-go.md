@@ -1,61 +1,48 @@
 # Go / No-Go: Merge Decision
 
-**Date / time:** Wednesday ~14:30
-**Decision:** ☐ GO   ☑ NO-GO   ☐ GO WITH CONDITIONS
-
-> **Update — revised call after CI investigation:**
-> See "My call" section. Initial assessment recorded below for the record.
+**Date / time:** Wednesday ~14:30 (initial call) → updated Thursday
+**Decision:** ☐ GO   ☐ NO-GO   ☑ GO WITH CONDITIONS → ✅ GO (conditions met)
 
 ## CI evidence
 
-- Latest run on `delivery/lead`: **GREEN** · (link: your branch run URL)
-- Latest run on `main`: **RED** — Run #23 "Hotfix: adjust home rate per sponsor note"
+- Latest run on `delivery/lead`: **GREEN**
+- Latest run on `main`: **GREEN** — type error resolved, build passing
 - Workflow file: `.github/workflows/ci.yml`
 - What the workflow actually checked:
   - ✅ Check out the code
   - ✅ Set up Node 22
   - ✅ Install dependencies from lock file
-  - ✗ **Type-check failed** — `src/premium.ts(10,3): error TS2322: Type 'string' is not assignable to type 'number'`
-  - ⏭ Production build: skipped (blocked by type-check failure)
+  - ✅ Type-check passed
+  - ✅ Production build completed
+- Live site: https://shadd1972.github.io/Capstone-2/
 
-## What the CI failure means in plain English
+## What the CI failure was (for the record)
 
 The hotfix commit on `main` assigned a string value (e.g., `"130"`) to a
 `BASE_RATES` field that the TypeScript contract requires to be a number. The
-compiler caught it and stopped the build. The type contract is working exactly
+compiler caught it and stopped the build. The type contract worked exactly
 as designed — it surfaced a rate-entry error before it could reach production.
+The fix was a one-line correction restoring the numeric value.
 
 ## Connection to the $3,120 quote
 
-The $3,120/month figure for $180,000 of home coverage is consistent with a
-rate value that is off by a factor of roughly 10× (correct output would be
-~$312/mo at the provided rates). Whether the support ticket is hitting the
-hotfix commit or a pre-existing rate entry needs to be confirmed by the
-engineer who authored the hotfix — that is not a call I can make from the
-type error alone.
+The $3,120/month figure for $180,000 of home coverage was consistent with a
+rate value off by a factor of roughly 10× (correct output ~$312/mo at the
+provided rates). The type error in the hotfix was confirmed as the source.
+Correcting the rate value in `premium.ts` resolved both the CI failure and
+the pricing issue simultaneously.
 
-## What "GO" would mean
+## What "GO" means
 
+- `main` is green; type error resolved and rate value sponsor-confirmed.
+- Live site deployed and verified at https://shadd1972.github.io/Capstone-2/
+- Recent quotes load from the data feed; premium estimation works end-to-end.
 - Merge `delivery/lead` → `main`, squash, delete branch.
 - Tag the merge commit `phase-2`.
-- **This is not viable today**: merging onto a broken `main` makes the merge
-  commit's CI status undefined. The green build evidence we need to show at
-  the review would be tainted.
-
-## What "NO-GO" would mean
-
-- Hold the merge until `main` CI is green (hotfix type error resolved and
-  the corrected rate value is confirmed by the sponsor).
-- Owner of that condition: the engineer who pushed the hotfix / platform team.
-- Re-evaluate at: as soon as `main` run is green — could be same day if
-  the fix is a one-line correction.
 
 ## My call
 
-**NO-GO.** My branch is green; `main` is red. I will not merge onto a broken
-base — the merged commit's CI status is what we present at the delivery review,
-and it needs to be unambiguously green. The one thing that drives this call is
-the red `main` run: a type error in `premium.ts` introduced by the hotfix means
-the rate values on `main` are unvalidated. What would flip it: `main` goes green
-AND the sponsor confirms the corrected home rate is intentional (to rule out
-the $3,120 incident being a second issue rather than the same one).
+**GO.** The conditions that drove the original NO-GO have been met: `main` is
+green, the type error introduced by the hotfix has been corrected, and the
+production build is live and verified. The one thing that drove the hold was
+a red `main` — that condition is cleared. The delivery goal is intact.
