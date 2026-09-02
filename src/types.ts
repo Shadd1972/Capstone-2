@@ -1,6 +1,6 @@
 // Shared types for the Evergreen quote app (provided).
 // These are the contracts every provided piece is written against.
-export type CoverageType = "auto" | "home" | "life";
+export type CoverageType = "auto" | "home" | "life" | "renters";
 
 export interface Quote {
   id: number;
