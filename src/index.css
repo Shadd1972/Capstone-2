@@ -209,3 +209,68 @@ body {
   border-radius: 10px;
   padding: 32px;
   }
+
+  /* Hero banner (coverage page) -------------------*/
+.hero--coverage {
+  background-image: url('/images/hero-coverage.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 64px 32px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hero-overlauy h1 {
+  color: rgba(255,255,255,0.85);
+  font-size: 2.2rem;
+  margin: 0 0 8px;
+}
+
+.her-overlap p {
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+ /* ---- Page heroes (Claims & About) -------------------*/
+ .page-hero {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.page-hero--claims {
+  background-image: url('/images/hero-claims.jpg');
+}
+
+.page-hero--about {
+  background-image: url('/images/hero-about.jpg');
+}
+
+.page-hero-text {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 48px 32px;
+  border-radius: 12px;
+}
+
+.page-hero-text h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0 0 6px;
+}
+
+.page-hero-text p {
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  font-size: 1rem;
+}

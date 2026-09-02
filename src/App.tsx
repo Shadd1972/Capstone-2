@@ -32,9 +32,11 @@ function App() {
       <main className="page">
         {activePage === "coverage" && (
           <>
-            <section className="hero">
-              <h1>Coverage that grows with you</h1>
-              <p>Get an estimated premium in under a minute, no account needed.</p>
+            <section className="hero hero--coverage">
+              <div className="hero-overlay">
+                <h1>Coverage that grows with you</h1>
+                <p>Get an estimated premium in under a minute, no account needed.</p>
+              </div>
             </section>
             <section className="quote-form-section">
               <QuoteForm />

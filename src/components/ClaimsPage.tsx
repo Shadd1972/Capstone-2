@@ -15,6 +15,12 @@ function ClaimsPage() {
   if (submitted) {
     return (
       <div className="claims-page">
+        <div className="claims-page">
+          <div className="page-hero-text">
+            <h1>Claims</h1>
+            <p>We're here to help when it matters most.</p>
+          </div>
+        </div>
         <h1>Claims</h1>
         <div className="claims-confirmation">
           <p className="message success">

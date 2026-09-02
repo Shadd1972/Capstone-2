@@ -1,6 +1,12 @@
 function AboutPage() {
   return (
     <div className="about-page">
+      <div className="page-hero [age-hero--about">
+        <div className="page-hero-text">
+          <h1>About</h1>
+          <p>Building skills. Leading teams. Staying close to the craft.</p>
+        </div>
+      </div>
       <h1>About</h1>
       <div className="quote-form">
         <h2>About This Project</h2>
